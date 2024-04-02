@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^$ /cgi-bin/osm_test1/main.cgi [L]
