@@ -28,6 +28,49 @@ __DATA__
 </head>
 <body>
     <div class="container mt-5">
+
+        <div class="row">
+            <div class="col">
+
+                <div class="accordion" id="descr_accordion">
+ <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_descr" aria-expanded="true" aria-controls="collapseOne">
+        Page description (tap to open/close)
+      </button>
+    </h2>
+    <div id="collapse_descr" class="accordion-collapse collapse" data-bs-parent="#descr_accordion">
+      <div class="accordion-body">
+This is a demonstration project, it allows you to obtain geo-data based on an address and vice versa. The following technologies were used for implementation:<br>
+<ul>
+  <li>Fron-end:</li>
+  <ul>
+    <li>HTML+CSS</li>
+    <li>Bootstrap 5 - for adaptive layout</li>
+    <li>jQuery (also ajax queryes to server with JQ)</li>
+  </ul>
+  <li>Back-end on Perl with standart modules:</li>
+  <ul>
+    <li>CGI - Handle Common Gateway Interface</li>
+    <li>Template Toolkit - as a basic system for separating algorithms and page layout code.</li>
+    <li>LWP - for API requests</li>
+    <li>JSON - for parsing API responses and ajax communications with front-end </li>
+    <li>Encode - to support locales when interacting with APIs</li>
+  </ul>
+  <li>OSM API (OpenStreetMap)</li>
+</ul>
+<p>From an optimization point of view, the best solution would be to route all requests to OpenAPI directly on the client side to reduce the load on the server. But because APIs often use access keys, which for security reasons should be hidden on the server side, this project demonstrates exactly this principle - demonstrating the interaction of the client with the API through the server.</p>
+<p>Server side: Apache on Linux on VPS (virtual private server)</p>
+<p>GitHub: <a href="https://github.com/pa-pe/osm_test1" target="_blank">https://github.com/pa-pe/osm_test1</a></p>
+</ul>
+
+      </div>
+    </div>
+  </div>
+                </div>
+
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6 work_block">
 

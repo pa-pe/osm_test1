@@ -1,1 +1,1 @@
-# osm_test1
+This is a demonstration project, it allows you to obtain geo-data based on an address and vice versa.
