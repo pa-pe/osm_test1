@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.query-form').submit(function(event) {
+    $('form.query-form').submit(function(event) {
         event.preventDefault(); // Prevent default form submission behavior
 
         var formData = $(this).serializeArray();

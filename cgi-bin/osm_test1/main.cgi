@@ -30,12 +30,12 @@ __DATA__
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 work_block">
+
                 <h2>Get geo by address</h2>
-                <form id="address-form" class="form-inline query-form">
+                <form class="form-inline query-form">
                     <div class="row" id="address-block">
                         <div class="col-10">
-                            <!-- input type="text" class="form-control address" id="address-input" placeholder="Enter address" -->
-                            <input type="text" class="form-control query-data" name="address" placeholder="Enter address">
+                            <input type="text" class="form-control" name="address" placeholder="Enter address">
                         </div>
                         <div class="col-2 text-end">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -49,7 +49,6 @@ __DATA__
                 <div class="result d-none"></div>
 <br>
                 <div class="accordion d-none" id="result_accordion1">
-
  <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -62,12 +61,48 @@ __DATA__
       </div>
     </div>
   </div>
-
                 </div>
+
             </div>
-            <div class="col-md-6">
-                <!-- Another block (if needed) -->
+            <div class="col-md-6 work_block">
+
+                <h2>Get address by geo</h2>
+                <form class="form-inline query-form">
+                    <div class="row" id="address-block">
+                        <div class="col-5">
+                            <input type="text" class="form-control" name="lat" placeholder="Latitude">
+                        </div>
+                        <div class="col-5">
+                            <input type="text" class="form-control" name="lon" placeholder="Longitude">
+                        </div>
+                        <div class="col-2 text-end">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+<br>
+                <div class="error d-none">
+                </div>
+                <div class="result d-none"></div>
+<br>
+                <div class="accordion d-none" id="result_accordion1">
+ <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        OSM API answer
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#result_accordion1">
+      <div class="accordion-body">
+                        <div class="result_raw"></div>
+      </div>
+    </div>
+  </div>
+                </div>
+
             </div>
+
         </div>
     </div>
 
