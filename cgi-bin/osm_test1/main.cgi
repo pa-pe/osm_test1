@@ -28,12 +28,13 @@ __DATA__
 <body>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 work_block">
                 <h2>Get geo by address</h2>
-                <form id="address-form" class="form-inline">
+                <form id="address-form" class="form-inline query-form">
                     <div class="row" id="address-block">
                         <div class="col-10">
-                            <input type="text" class="form-control" id="address-input" placeholder="Enter address">
+                            <!-- input type="text" class="form-control address" id="address-input" placeholder="Enter address" -->
+                            <input type="text" class="form-control query-data" name="address" placeholder="Enter address">
                         </div>
                         <div class="col-2 text-end">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -42,10 +43,11 @@ __DATA__
                 </form>
 
 <br>
-                <div class="results d-none">
-                    <div id="result"></div>
+                <div class="error d-none">
+                </div>
+                <div class="result d-none"></div>
 <br>
-                    <div class="accordion" id="result_accordion">
+                <div class="accordion d-none" id="result_accordion1">
 
  <div class="accordion-item">
     <h2 class="accordion-header">
@@ -53,14 +55,13 @@ __DATA__
         OSM API answer
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#result_accordion1">
       <div class="accordion-body">
-                        <div id="result_raw"></div>
+                        <div class="result_raw"></div>
       </div>
     </div>
   </div>
 
-                    </div>
                 </div>
             </div>
             <div class="col-md-6">

@@ -37,7 +37,7 @@ Longitude: $location->{lat}<br>
             raw_response => $decoded_content
         };
     } else {
-        $result = "Address not found";
+        $result = { error => "Address not found" };
     }
 } else {
     $result = "Error requesting data from OpenStreetMap server";
