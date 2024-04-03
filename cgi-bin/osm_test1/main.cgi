@@ -29,7 +29,7 @@ __DATA__
 <body>
     <div class="container mt-5">
 
-        <div class="row">
+        <div class="row mb30pt">
             <div class="col">
 
                 <div class="accordion" id="descr_accordion">
@@ -60,6 +60,7 @@ This is a demonstration project, it allows you to obtain geo-data based on an ad
   <li>OSM API (OpenStreetMap)</li>
 </ul>
 <p>From an optimization point of view, the best solution would be to route all requests to OpenAPI directly on the client side to reduce the load on the server. But because APIs often use access keys, which for security reasons should be hidden on the server side, this project demonstrates exactly this principle - demonstrating the interaction of the client with the API through the server.</p>
+<p>To demonstrate the flexibility of the code, both forms located on the page have a single jQuery handler, as well as a single server-side interface.</p>
 <p>Server side: Apache on Linux on VPS (virtual private server)</p>
 <p>GitHub: <a href="https://github.com/pa-pe/osm_test1" target="_blank">https://github.com/pa-pe/osm_test1</a></p>
 </ul>
