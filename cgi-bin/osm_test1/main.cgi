@@ -86,14 +86,14 @@ __DATA__
                 </div>
                 <div class="result d-none"></div>
 <br>
-                <div class="accordion d-none" id="result_accordion1">
+                <div class="accordion d-none" id="result_accordion2">
  <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
         OSM API answer
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#result_accordion1">
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#result_accordion2">
       <div class="accordion-body">
                         <div class="result_raw"></div>
       </div>
