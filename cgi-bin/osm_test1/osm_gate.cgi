@@ -13,7 +13,12 @@ my $address = $cgi->param('address');
 
 # Send a request to the OpenStreetMap server to get coordinates
 my $ua = LWP::UserAgent->new;
-my $url = "https://nominatim.openstreetmap.org/search?q=$address&format=json&accept-language=en";
+my $url = "";
+if ($address){
+    $url = "https://nominatim.openstreetmap.org/search?q=$address&format=json&accept-language=en";
+#} elsif(1) {
+#https://nominatim.openstreetmap.org/reverse?lat=<latitude>&lon=<longitude>&format=json
+}
 my $response = $ua->get($url);
 
 my $result;
@@ -22,12 +27,18 @@ if ($response->is_success) {
     my $data = JSON->new->decode($decoded_content);
     if (@$data) {
         my $location = $data->[0];
+        my $prepared_results = "";
 
-        my $prepared_results = << "[END]";
+        if ($location->{lat}){
+            $prepared_results .= << "[END]";
 <b>$location->{display_name}</b><br>
 Latitude: $location->{lat}<br>
-Longitude: $location->{lat}<br>
+Longitude: $location->{lon}<br>
+<a class="btn btn-success icon-link" href="https://www.google.com/maps?q=$location->{lat},$location->{lon}" target="_blank">
+ Google Maps
+</a><br>
 [END]
+        }
 
         $result = {
 #            name => $location->{name},
