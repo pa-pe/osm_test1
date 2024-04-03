@@ -11,7 +11,7 @@ my $tt = Template->new;
 print $cgi->header(-type => 'text/html', -charset => 'utf-8');
 
 my $template_data = {
-    title => "Hello ;)",
+    title => "Demo of OSM API via Perl backend",
 #    cgi_version => "CGI version: ".$CGI::VERSION,
 };
 
